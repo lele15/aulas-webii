@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+//Route::get('/eixo', 'App\Http\Controllers\EixoController@index')->name('eixo.index');
+//Route::get('/eixo/create', 'App\Http\Controllers\EixoController@create')->name('eixo.create');
+//Route::post('/eixo', 'App\Http\Controllers\EixoController@store')->name('eixo.store');
+Route::resource('/eixo', 'App\Http\Controllers\EixoController');
+Route::resource('/curso', 'App\Http\Controllers\CursoController');
+Route::get('/report/eixos/{eixo_id}', 'App\Http\Controllers\EixoController@report')->name('eixo.report');
+Route::get('/graph/eixos', 'App\Http\Controllers\EixoController@graph')->name('eixo.graph');
