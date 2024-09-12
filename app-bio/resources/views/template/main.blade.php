@@ -99,7 +99,7 @@
                 @endif
             </div>
             <div class="col-8 d-flex justify-content-center">
-                <span class="text-success fs-4 fw-bold">{{ mb_strtoupper($submenu, 'UTF-8'); }}</span>
+                <span class="text-success fs-4 fw-bold">{{ mb_strtoupper($submenu, 'UTF-8') }}</span>
             </div>
             <div class="col-2 d-flex justify-content-end">
                 @if(isset($rota))
